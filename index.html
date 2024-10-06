@@ -108,21 +108,34 @@
 		<span>Contact</span>
 		</h1>
 
-		<form action="https://api.web3forms.com/submit" method="POST">
-		<input type="hidden" name="access_key" value="5e2eeeb3-959e-4221-a4e5-6acec912a545">
 
 
-			<div class="input-box"><span>Full Name</span>
-			<input type="text" name="name" placeholder="Enter your name"	
-			</div>
-			<div class="input-box"><span>Email</span>
-			<input type="text" name="email" placeholder="Enter your Email"	
-			</div>
-			<div class="input-box"><span>Massage</span>
-			<input type="text" name="message" placeholder="Massage"	
-			</div>
-			<div class="btn">Submit</div>
 
+<form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="5e2eeeb3-959e-4221-a4e5-6acec912a545">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+<div class="input-box"><span>Full Name</span>
+    <input type="text" name="name" placeholder="Enter your name" required>
+</div>
+
+<div class="input-box"><span>Email</span>
+    <input type="email" name="email" placeholder="Enter your Email" required>
+</div>
+
+<div class="input-box"><span>Massage</span>
+    <input type="text"   name="message" placeholder="Massage" required>
+</div>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit" class="btn">Submit</button>
 
 
 
